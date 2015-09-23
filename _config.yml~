@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title: ericjé.com
+title: Site Title
 locale: en_US
-description: Blog
+description: Describe your website here.
 logo: site-logo.png
 search: true
 url: http://localhost:4000
@@ -33,16 +33,16 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 
 # Site owner
 owner:
-  name: Eric Jansen
+  name: Your Name
   avatar: bio-photo.jpg
-  email: eric@jansen.net
+  email: you@email.com
   disqus-shortname:
-  twitter: #ericjansen
-  facebook: #ericjansen
-  github: #ericjansen
+  twitter: #username
+  facebook: #username
+  github: #username
   stackexchange: #http://stackoverflow.com/users/123456/username
-  linkedin: #ericje
-  instagram: #ericjansen
+  linkedin: #username
+  instagram: #username
   flickr: #username
   tumblr: #username
   pinterest: #username
