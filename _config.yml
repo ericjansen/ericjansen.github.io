@@ -5,6 +5,9 @@ locale: en_US
 description: Blog
 logo: site-logo.png
 search: true
+url: http://www.ericje.com
+url: //www.ericje.com
+url: http://ericjansen.github.io
 url: http://localhost:4000
 
 # Jekyll configuration
