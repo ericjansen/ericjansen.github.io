@@ -5,7 +5,9 @@ locale: en_US
 description: Blog
 logo: site-logo.png
 search: true
+url: http://ericje.com
 url: http://www.ericje.com
+url: //ericje.com
 url: //www.ericje.com
 url: http://ericjansen.github.io
 
