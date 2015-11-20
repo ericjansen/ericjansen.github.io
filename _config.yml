@@ -9,7 +9,7 @@ url: http://ericje.com
 url: http://www.ericje.com
 url: //ericje.com
 url: //www.ericje.com
-url: http://ericjansen.github.io
+#url: http://ericjansen.github.io
 
 # Jekyll configuration
 
@@ -43,7 +43,7 @@ owner:
   disqus-shortname:
   twitter: ericjansen
   facebook: ericjansen
-  github: ericjansen
+  github: #ericjansen
   stackexchange: #http://stackoverflow.com/users/123456/username
   linkedin: http://id.linkedin.com/in/ericje
   instagram: ericjansen
