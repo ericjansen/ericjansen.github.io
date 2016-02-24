@@ -18,7 +18,7 @@ permalink:   /:categories/:title/
 markdown:	 redcarpet
 extensions:  [fenced_code_blocks]
 markdown:    kramdown
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
