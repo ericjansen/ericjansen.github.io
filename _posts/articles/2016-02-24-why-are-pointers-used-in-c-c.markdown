@@ -3,7 +3,7 @@ layout: post
 title: Why are Pointers Used in C/C++
 categories: articles
 excerpt: "Why do you need to use pointers in C/C++?"
-date: 2016-02-24T13:26:32+08:00
+date: 2014-10-14T13:26:32+08:00
 search_omit: true_
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: How do I Learn Pointers in C/C++
 categories: articles
 excerpt: "Description about pointers in C/C++?"
-date: 2016-02-24T13:25:55+08:00
+date: 2014-10-19T13:25:55+08:00
 search_omit: true_
 ---
 

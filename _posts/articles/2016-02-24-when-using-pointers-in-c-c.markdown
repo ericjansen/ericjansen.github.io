@@ -3,7 +3,7 @@ layout: post
 title: When Using Pointers in C++
 categories: articles
 excerpt: "When do you use pointers while programming?"
-date: 2016-02-24T11:47:02+08:00
+date: 2014-10-16T11:47:02+08:00
 search_omit: true_
 ---
 
