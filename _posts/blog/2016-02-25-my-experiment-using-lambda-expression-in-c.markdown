@@ -55,7 +55,7 @@ int main()
     std::cout << "Input: ";
     std::getline(std::cin,strWord);
     int iCount = 0;
-    std::for_each(strWord.begin(),strWord.end(),[&iCount](char c)->int{ 
+    std::for_each(strWord.begin(),strWord.end(),[&iCount](const char& c)->int{ 
 		if (islower(c)) ++iCount; return iCount; });
     std::cout << "Number of lower-case found: " << iCount << " characters\n"; 
 
@@ -66,6 +66,28 @@ As in console, I type any string and it will count the amount of lower-case lett
 {% highlight bash %}
 Input: Test Hello World. It is an amazing day
 Number of lower-case found: 26 characters
+{% endhighlight %}
+
+Example 4 - Adding one to each element of vector
+{% highlight c++ %}
+int main() {
+    std::vector<int> viNum = { 3,4,6,8,100 };
+    std::cout << "Before : ";
+    for (auto const& n : viNum) std::cout << ' ' << n;
+    std::cout << '\n';
+	
+    std::for_each(viNum.begin(),viNum.end(),[](int& iNum){ ++iNum; });
+	
+    std::cout << "After : ";
+    for (auto const& n : viNum) std::cout << ' ' << n;
+    std::cout << '\n';
+    return 0;
+}
+{% endhighlight %}
+Result as shown below:
+{% highlight c++ %}
+Before :  3 4 6 8 100
+After :  4 5 7 9 101
 {% endhighlight %}
 
 I hope this simple tutorial can be helpful to understand about lambda function.
