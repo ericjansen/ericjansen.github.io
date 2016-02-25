@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My Experiment Using Lambda Expression in C++
-categories: articles
+categories: blog
 excerpt: "Trial and error Lambda Function"
 date: 2013-07-08T13:34:10+08:00
 search_omit: true_
