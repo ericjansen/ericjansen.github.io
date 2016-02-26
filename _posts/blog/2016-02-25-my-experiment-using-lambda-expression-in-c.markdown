@@ -108,4 +108,66 @@ Before :  3 4 6 8 100
 After :  4 5 7 9 101
 {% endhighlight %}
 
+###### Example 6 - Manipulating data structure of vector
+{% highlight c++ %}
+struct IDVAL {
+    int iID;
+    std::string strVal;
+};
+
+int main()
+{
+    std::vector<IDVAL> viA = { {0,"Singapore"},{1,"Tokyo"} };
+    std::vector<IDVAL> viB(2);
+
+    std::copy(viA.begin(),viA.end(),viB.begin());
+    
+    std::cout << "Before process\n";
+    for (const auto& v : viB)
+        std::cout << v.iID << ' ' << v.strVal << '\n';
+
+    auto Add = [&viB](const int& id,const std::string& str){ viB.push_back({id,str}); };
+
+    auto ChangeVal = [&viB](const int& id,const std::string& str){ 
+        for (std::vector<IDVAL>::iterator it = viB.begin(); it != viB.end(); ++it)
+            if (it->iID == id) it->strVal = str; };
+
+    Add(2,"Vancouver");
+    Add(3,"Jakarta");
+    Add(4,"Kuala Lumpur");
+
+    std::cout << "\nAfter adding\n";
+    for (const auto& v : viB)
+        std::cout << v.iID << ' ' << v.strVal << '\n';
+
+    ChangeVal(4,"Sydney");
+
+    std::cout << "\nAfter modifying\n";
+    for (const auto& v : viB)
+        std::cout << v.iID << ' ' << v.strVal << '\n';
+
+    return 0;
+}
+{% endhighlight %}
+Result:
+{% highlight c++ %}
+Before process
+0 Singapore
+1 Tokyo
+
+After adding
+0 Singapore
+1 Tokyo
+2 Vancouver
+3 Jakarta
+4 Kuala Lumpur
+
+After modifying
+0 Singapore
+1 Tokyo
+2 Vancouver
+3 Jakarta
+4 Sydney
+{% endhighlight %}
+
 I hope this simple tutorial can be helpful to understand about lambda function.
