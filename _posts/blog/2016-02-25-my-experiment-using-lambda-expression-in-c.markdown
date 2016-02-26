@@ -14,7 +14,7 @@ Conceptually, lambda function is like the following:
 [ captures ]( parameters )->returnTypesDeclaration { lambdaStatement; }
 {% endhighlight %}
 
-#####Example 1 - Sum of 2 parameters
+##### Example 1 - Sum of 2 parameters
 Traditionally, the following ``sum`` function looks like:
 {% highlight c++ %}
 int sum(int iB,int iC) {
@@ -27,7 +27,7 @@ auto iA = [](int iB, int iC){ return iB + iC; };
 {% endhighlight %}
 Until this point, I do not capture in the ``[]`` any parameter to process. So let me show you the next example.
 
-#####Example 2 - Area of a circle
+##### Example 2 - Area of a circle
 {% highlight c++ %}
 double circ(const double& lfR) {
     float fPI = 3.141592653;
@@ -48,7 +48,7 @@ Either you want to catch it as reference or value, it is up to your logical mann
 
 Let me show you again the other example below with returning value.
 
-#####Example 3 - Counting lower case in a string
+##### Example 3 - Counting lower case in a string
 {% highlight c++ %}
 int main()
 {
@@ -69,7 +69,7 @@ Input: Test Hello World. It is an amazing day
 Number of lower-case found: 26 characters
 {% endhighlight %}
 
-#####Example 4 - Finding matching ID function
+##### Example 4 - Finding matching ID function
 {% highlight c++ %}
 struct record {
     std::string strName;
@@ -86,7 +86,7 @@ auto find_id(const std::vector<record> &people,const std::string &cstrName) {
 {% endhighlight %}
 
 
-#####Example 5 - Adding one to each element of vector
+##### Example 5 - Adding one to each element of vector
 {% highlight c++ %}
 int main() {
     std::vector<int> viNum = { 3,4,6,8,100 };
