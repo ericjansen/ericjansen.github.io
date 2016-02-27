@@ -11,15 +11,13 @@ Conceptually pointers are the only actual abstraction showing access to underlyi
 
 Going to details, most pointer uses can be replaced by references, but there is still a visible few cases where references can't replace them. 
 
-void pointers is such a case. There is some functions expecting the address of something where something is untyped (like memcpy). Accessing hardware from addresses is another such case.
+```void``` pointers is such a case. There is some functions expecting the address of something where something is untyped (like ```memcpy```). Accessing hardware from addresses is another such case.
 
-Heap memory allocation (through malloc or new) implies pointers (even if you can dereference return of new to assign to reference). To remove pointers we would have to change new to something else. References provides no tool for memory allocation. And there is even some cases where underlying implementation is horrible (like allocation of at least one byte fior every struct, including empty ones to ensure all references are at different addresses) Also a reference is unique henceforth you can't really change it and this ability is needed for many dynamic data structures. To change that you would have to change both new and delete to something else (for instance the Java way), but doing so you are losing control on the low level.
+Heap memory allocation (through ```malloc``` or ```new```) implies pointers (even if you can dereference return of new to assign to reference). To remove pointers we would have to change new to something else. References provides no tool for memory allocation. And there is even some cases where underlying implementation is horrible (like allocation of at least one byte for every struct, including empty ones to ensure all references are at different addresses) Also a reference is unique henceforth you can't really change it and this ability is needed for many dynamic data structures. To change that you would have to change both new and delete to something else (for instance the Java way), but doing so you are losing control on the low level.
 
 What could probably be removed is equivalence between pointers and arrays. This is an ongoing process as there is more and more restrictions on the subject, like C++ forbidding to compute some intermediate address out of the array (except the next to last) even if you never dereference it. 
 
 C++ without pointers should look very much like Java (if we ignore other differences like templates). If this is a good  evolution or not is another question. I would say if it evolves this way, C++ won't fit the "portable assembly" historic ecological niche of C language any more. Henceforth we would need another low-level object oriented language to replace it for that purpose.
-
-Eric Pepke wrote that "Everything uses pointers. C++ just exposes them rather than hiding them," and I agree with him. And it irritates me that many other languages pretend as if they don't exist. If those languages could somehow totally hide their presence, it would be fine. But, instead, many of them brush them under a syntactical rug, and the end result is confusing. 
 
 Take, for instance, Javascript:
 {% highlight javascript %}
