@@ -65,7 +65,8 @@ struct Node {
 {% endhighlight %}
 Now, if we remove a ``Node``, there's a cyclic reference to it. It'll never be ``delete`` d because its reference count will never be zero.
 
-To solve this problem, you use a ``std::weak_ptr<>``:
+To solve this problem, you use a ``std::weak_ptr<>``. Weak pointers just "observe" the managed object; they don't "keep it alive" or affect its lifetime. Unlike ``shared_ptr``s, when the last ``weak_ptr`` goes out of scope or disappears, the pointed-to object can still exist because
+the ``weak_ptr``s do not affect the lifetime of the object - they have no ownership rights. But the ``weak_ptr`` can be used to determine whether the object exists, and to provide a ``shared_ptr`` that can be used to refer to it. 
 {% highlight c++ %}
 template<class T>
 struct Node {
