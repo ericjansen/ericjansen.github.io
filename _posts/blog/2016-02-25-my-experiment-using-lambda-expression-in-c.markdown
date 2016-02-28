@@ -5,6 +5,7 @@ categories: blog
 excerpt: "Trial and error Lambda Function"
 date: 2013-07-08T13:34:10+08:00
 search_omit: true_
+share: true
 ---
 
 Lambda function under ``C++11`` is very helpful. Following I am not going to explain about it in details. You can find the reference about it from <a href="http://en.cppreference.com/w/cpp/language/lambda">this source</a>.

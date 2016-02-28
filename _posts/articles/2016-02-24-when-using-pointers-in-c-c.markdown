@@ -5,6 +5,7 @@ categories: articles
 excerpt: "When do you use pointers while programming?"
 date: 2014-10-16T11:47:02+08:00
 search_omit: true_
+share: true
 ---
 
 <h5>1. When functions have outputs other than their return value.</h5> 

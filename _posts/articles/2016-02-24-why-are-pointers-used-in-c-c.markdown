@@ -5,6 +5,7 @@ categories: articles
 excerpt: "Why do you need to use pointers in C/C++?"
 date: 2014-10-14T13:26:32+08:00
 search_omit: true_
+share: true
 ---
 Conceptually pointers are the only actual abstraction showing access to underlying memory and you need them for any kind of controled memory allocation. If you remove them from the language (as it was done in other languages), you are losing something that can't be replaced.
 

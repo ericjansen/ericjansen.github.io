@@ -5,6 +5,7 @@ categories: articles
 excerpt: "Description about pointers in C/C++?"
 date: 2014-10-19T13:25:55+08:00
 search_omit: true_
+share: true
 ---
 
 First, lose any mysticism you might have gathered about pointers. If you've heard that pointers are hard to grasp, just forget that and relax. Memory is an array and variables are things kept in memory, with a value of some sort written at some memory position.

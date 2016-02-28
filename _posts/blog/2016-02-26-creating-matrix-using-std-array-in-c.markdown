@@ -5,6 +5,7 @@ categories: blog
 excerpt: "Defining 2D and 3D Matrices"
 date: 2015-03-14T10:48:22+08:00
 search_omit: true_
+share: true
 ---
 
 Most of C++ developers agree that the complexities of C++ comprise of pointer utilization, string, and matrix topics. Matrix is a crucial part of programming, so I'd like to share from my standing point in using ```std::array```. Since ``C++11``, ``std::array`` is one of its feature of STL.

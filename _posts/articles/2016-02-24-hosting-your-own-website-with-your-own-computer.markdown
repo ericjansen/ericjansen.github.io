@@ -5,6 +5,7 @@ categories: articles
 excerpt: "Can I host My Own Website with My Own Computer?"
 date: 2014-09-07T10:51:49+08:00
 search_omit: true_
+share: true
 ---
 
 

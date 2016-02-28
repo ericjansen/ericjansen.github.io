@@ -5,6 +5,7 @@ categories: articles
 excerpt: "auto_ptr, unique_ptr, shared_ptr, or weak_ptr?"
 date: 2015-03-07T13:42:24+08:00
 search_omit: true_
+share: true
 ---
 
 A "raw" pointer is unmanaged. That is, the following line:

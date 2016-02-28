@@ -5,6 +5,7 @@ categories: blog
 excerpt: "Genetic Algorithm Mastermind Game"
 date: 2016-02-10T20:55:37+08:00
 search_omit: true_
+share: true
 ---
 
 For those who already learned about genetic algorithm is an AI method for finding the optimal number mimicking genetical mutation, and cross-over or mating in order to find the finest generation.
