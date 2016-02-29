@@ -14,7 +14,7 @@ SomeKindOfObject *someKindOfObject = new SomeKindOfObject();
 {% endhighlight %}
 .. will leak memory if an accompanying delete is not executed at the proper time.
 
-#### auto_ptr<T>
+#### ``auto_ptr<T>``
 In order to minimize these cases, ``std::auto_ptr<T>`` was introduced. Due to the limitations of C++ prior to the 2011 standard, however, it's still very easy for auto_ptr to leak memory. It is sufficient for limited cases, such as this, however:
 {% highlight c++ %}
 void func() {
@@ -25,7 +25,7 @@ void func() {
 {% endhighlight %}
 One of its weakest use-cases is in containers. This is because if a copy of an ``std::auto_ptr<T>`` is made and the old copy is not carefully reset, then both copies of the auto pointer will attempt to delete the object, resulting in a double-free in the worst case.
 
-#### unique_ptr<T>
+#### ``unique_ptr<T>``
 As a replacement, C++11 introduced ``std::unique_ptr<T>``:
 {% highlight c++ %}
 void func2() {
@@ -40,7 +40,7 @@ std::vector<std::unique_ptr<SomeKindofObject>> sKOO_vector();
 {% endhighlight %}
 Unlike ``std::auto_ptr<T>``, ``std::unique_ptr<T>`` is well-behaved here, and when the vector resizes, none of the objects will be accidentally deleted while the vector copies its backing store.
 
-#### shared_ptr<T> and weak_ptr<T>
+#### ``shared_ptr<T>`` and ``weak_ptr<T>``
 ``std::unique_ptr<T>`` is useful, to be sure, but there are cases where you want two parts of your code base to be able to refer to the same object and copy the pointer around, while still being guaranteed proper cleanup. For example, a tree might look like this, when using ``std::shared_ptr<T>``:
 {% highlight c++ %}
 template<class T>
@@ -83,7 +83,7 @@ std::shared_ptr<Node<T>> parent_of_this = node->parent.lock();
 {% endhighlight %}
 This way, you can lock a reference to the node, and you have a reasonable guarantee it won't disappear while you're working on it, since you're holding on to a ``std::shared_ptr<T>`` of it.
 
-##### make_shared and make_unique
+##### ``make_shared<T>()`` and ``make_unique<T>()``
 Now, there are some minor problems with ``std::shared_ptr<T>`` and ``std::unique_ptr<T>`` that should be addressed. The following two lines have a problem:
 {% highlight c++ %}
 foo_unique(std::unique_ptr<SomeKindofObject>(new SomeKindOfObject()), thrower());
