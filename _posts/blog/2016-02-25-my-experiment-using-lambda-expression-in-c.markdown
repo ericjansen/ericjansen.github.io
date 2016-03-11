@@ -178,7 +178,7 @@ If you want to do recursion for e.g. factorial, you must include ``std::function
 #include <functional>
 
 int main() {
-    std::function<int (int)> factorial = [&](int i) { return i==1 ? 1 : i*factorial(i-1); };
+    std::function<const unsigned long&(const unsigned&)> factorial = [&](const unsigned& i) { return i==1 ? 1 : i*factorial(i-1); };
     std::cout << factorial(5) << '\n';;
 
     return 0;
