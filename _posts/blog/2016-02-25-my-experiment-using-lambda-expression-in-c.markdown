@@ -171,4 +171,18 @@ After modifying
 4 Sydney
 {% endhighlight %}
 
+##### Example 7 - Recursive lambda expression
+If you want to do recursion for e.g. factorial, you must include ``std::function<T>``, as shown below:
+{% highlight c++ %}
+#include <iostream>
+#include <functional>
+
+int main() {
+    std::function<int (int)> factorial = [&](int i) { return i==1 ? 1 : i*factorial(i-1); };
+    std::cout << factorial(5) << '\n';;
+
+    return 0;
+}
+{% endhighlight %}
+
 I hope this simple tutorial can be helpful to understand about lambda function.
