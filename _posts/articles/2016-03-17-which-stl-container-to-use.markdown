@@ -14,4 +14,3 @@ Scott Meyers is an author of C++ and an expert C++ developer. Many books that ar
 For simple diagram about the STL containers, please learn from the following:
 
 {% img /images/STL_container-map2.png "STL Container Diagram" %}
-	
