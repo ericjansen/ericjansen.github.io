@@ -42,7 +42,7 @@ int main() {
 {% endhighlight %}
 The result will show:
 {% highlight c++ %}
-iA = 101	*pB = 101	*pC = 101	*pD = 101
+iA = 101   *pB = 101	*pC = 101	*pD = 101
 sizeof(iA) = 4	sizeof(pB) = 8	sizeof(pC) = 8	sizeof(pD) = 8
 sizeof(&iA) = 8
 address of iA = 0x7fff56e8c878	address of pB = 0x7fff56e8c878	address of pC = 0x7fff56e8c878	address of pD = 0x7fff56e8c878
