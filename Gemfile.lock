@@ -115,6 +115,8 @@ GEM
       octopress-hooks (~> 2.0)
     octopress-hooks (2.6.1)
       jekyll (>= 2.0)
+    octopress-image-tag (1.1.0)
+      jekyll
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.11)
@@ -150,6 +152,7 @@ DEPENDENCIES
   jekyll
   jekyll-sitemap
   octopress (~> 3.0.0.rc.12)
+  octopress-image-tag
   rouge
 
 BUNDLED WITH
