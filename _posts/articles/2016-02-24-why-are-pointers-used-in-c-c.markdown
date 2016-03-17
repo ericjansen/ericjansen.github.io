@@ -19,7 +19,36 @@ What could probably be removed is equivalence between pointers and arrays. This 
 
 C++ without pointers should look very much like Java (if we ignore other differences like templates). If this is a good  evolution or not is another question. I would say if it evolves this way, C++ won't fit the "portable assembly" historic ecological niche of C language any more. Henceforth we would need another low-level object oriented language to replace it for that purpose.
 
-Take, for instance, Javascript:
+Let me show you a simple example:
+{% highlight c++ %}
+int main() {
+    int iA;
+    int *pB = &iA;
+    int *pC = &iA;
+    int *pD = pB;
+
+    iA = 100;
+
+    ++(*pC);
+
+    std::cout << "iA = " << iA << "\t*pB = " << *pB << "\t*pC = " << *pC << "\t*pD = " << *pD << '\n';
+    std::cout << "sizeof(iA) = " << sizeof(iA) << "\tsizeof(pB) = " << sizeof(pB) << "\tsizeof(pC) = " << 
+        sizeof(pC) << "\tsizeof(pD) = " << sizeof(pD) << '\n';
+    std::cout << "sizeof(&iA) = " << sizeof(&iA) << '\n';
+    std::cout << "address of iA = " << &iA << "\taddress of pB = " << pB << "\taddress of pC = " << pC << "\taddress of pD = " << pD << '\n';
+
+    return 0;
+}
+{% endhighlight %}
+The result will show:
+{% highlight c++ %}
+iA = 101	*pB = 101	*pC = 101	*pD = 101
+sizeof(iA) = 4	sizeof(pB) = 8	sizeof(pC) = 8	sizeof(pD) = 8
+sizeof(&iA) = 8
+address of iA = 0x7fff56e8c878	address of pB = 0x7fff56e8c878	address of pC = 0x7fff56e8c878	address of pD = 0x7fff56e8c878
+{% endhighlight %}
+
+Another example, from Javascript point of view:
 {% highlight javascript %}
 function foo( bar ) {
  bar++;
