@@ -13,4 +13,4 @@ To be concise, you can refer to "Effective STL" by Scott Meyers.
 Scott Meyers is an author of C++ and an expert C++ developer. Many books that are useful are written by him. In order to be great and comprehensive C++ developer, one should read his books.
 For simple diagram about the STL containers, please learn from the following:
 
-{% img /images/STL_container-map2.png "STL Container Diagram" %}
+![STL Container Diagram]({{ site.url }}/images/STL_container-map2.png)
